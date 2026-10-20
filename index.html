@@ -129,12 +129,18 @@ input[type=color]::-moz-color-swatch{border:1px solid var(--line);border-radius:
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:60;background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);color:var(--ink);padding:12px 20px;border-radius:980px;font-weight:500;font-size:14px;max-width:min(560px,calc(100% - 32px));box-shadow:0 10px 40px rgba(0,0,0,.18),0 0 0 .5px var(--line)}
 .result img{max-width:100%;max-height:62vh;display:block;margin:0 auto;border-radius:10px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.byline{font-size:12px;color:var(--muted);white-space:nowrap}
+.byline b{color:var(--ink);font-weight:600}
+.foot{margin-top:40px}
+.foot-in{max-width:1400px;margin:0 auto;border-top:1px solid var(--sep);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;font-size:12px;color:var(--muted)}
+.foot-in b{color:var(--ink);font-weight:600}
 @media (max-width:900px){.app{grid-template-columns:minmax(0,1fr)}.main{order:-1}.stage{padding:16px;min-height:260px;border-radius:18px}.stats{display:none}.intro{padding-block:24px 18px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 
 <nav class="nav" aria-label="Toolbar"><div class="nav-in gut">
   <span class="appname"><span class="appicon" aria-hidden="true"><i></i><i></i><i></i></span>Lightbox Collage</span>
+  <span class="byline">Built by <b>@underdogbuilder</b></span>
   <div class="stats" aria-live="polite">
     <span class="stat"><b id="stPhotos">0</b>photos</span>
     <span class="stat"><b id="stStyle">—</b>style</span>
@@ -246,6 +252,8 @@ input[type=color]::-moz-color-swatch{border:1px solid var(--line);border-radius:
     </section>
   </main>
 </div>
+
+<footer class="foot gut"><div class="foot-in"><span>Lightbox Collage</span><span>Built by <b>@underdogbuilder</b></span></div></footer>
 
 <div class="modal" id="cropModal" hidden>
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="cropTitle">
